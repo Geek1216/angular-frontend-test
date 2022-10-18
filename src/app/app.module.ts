@@ -17,13 +17,15 @@ import { Service } from './service/index';
 import {MatCardModule} from '@angular/material/card';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { ImageComponent } from './giphy/image/image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ListComponent,
-    SearchComponent
+    SearchComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

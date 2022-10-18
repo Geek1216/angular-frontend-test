@@ -38,24 +38,9 @@ export class ListComponent implements OnInit {
       });
   }
 
-  // getGiphyItemsBySearch(): void {
-  //   this.apiService
-  //     .getGiphyItemsBySearch({
-  //       q: this.searchText,
-  //       limit: this.pageSize,
-  //       offset: this.offset,
-  //     })
-  //     .pipe(takeUntil(this.destroy$))
-  //     .subscribe((giphyItems: any) => {
-  //       this.length = giphyItems.pagination.total_count;
-  //       this.giphyItems = giphyItems.data;
-  //     });
-  // }
   onEnterSearch = (event: any): void => {
-    console.log('S-s->>>>>>>>>>>', event.target.value);
     this.searchText = event.target.value;
     this.getGiphyItems();
-    //callback code here
   };
 
   setPageSizeOptions(setPageSizeOptionsInput: string) {
@@ -66,10 +51,8 @@ export class ListComponent implements OnInit {
     }
   }
   getPageEvent(event: any) {
-    console.log('S-s-s>>>>>>>getPageEvent>>>>>>>>', event);
     this.pageSize = event.pageSize;
     this.offset = event.pageIndex * event.pageSize;
     this.getGiphyItems();
-    // this.length=
   }
 }

@@ -1,0 +1,15 @@
+<div *ngIf="giphyItems.length" style="padding-left: 10px; padding-right: 10px;">
+  <mat-grid-list cols="3" rowHeight="220px">
+    <div *ngFor="let item of giphyItems">
+      <mat-grid-tile>
+        <img
+          height="100%"
+          width="100%"
+          mat-card-image
+          src="{{ item.images.original.url }}"
+          alt="{{ item.slug }}"
+        />
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+</div>
