@@ -8,9 +8,23 @@ import { MatSliderModule } from '@angular/material/slider';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { ListComponent } from './giphy/list/list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { SearchComponent } from './giphy/search/search.component';
+import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { Service } from './service/index';
+import {MatCardModule} from '@angular/material/card';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ListComponent,
+    SearchComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,8 +32,15 @@ import { MatIconModule } from '@angular/material/icon';
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
+    MatGridListModule,
+    MatInputModule,
+    HttpClientModule,
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [Service],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
